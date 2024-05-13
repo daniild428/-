@@ -1,0 +1,36 @@
+﻿<Window x:Class="_1111.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1111"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Change Background Color" Click="ChangeBackgroundColor_Click"
+                          MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave"/>
+                    <MenuItem Header="_About Developer" Click="AboutDeveloper_Click"
+                          MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave"/>
+                    <MenuItem Header="_Exit" Click="Exit_Click" MouseEnter="MenuItem_MouseEnter" MouseLeave="MenuItem_MouseLeave"/>
+                </MenuItem>
+            </Menu>
+
+            <ToolBar DockPanel.Dock="Top">
+                <Button ToolTip="Change Background Color" Click="ChangeBackgroundColor_Click"
+                    MouseEnter="ToolBarButton_MouseEnter" MouseLeave="ToolBarButton_MouseLeave">Change Background</Button>
+                <Button ToolTip="About Developer" Click="AboutDeveloper_Click"
+                    MouseEnter="ToolBarButton_MouseEnter" MouseLeave="ToolBarButton_MouseLeave">About Developer</Button>
+                <Button ToolTip="Exit" Click="Exit_Click" MouseEnter="ToolBarButton_MouseEnter" MouseLeave="ToolBarButton_MouseLeave">Exit</Button>
+            </ToolBar>
+
+            <StatusBar>
+                <TextBlock x:Name="StatusBarTextBlock"></TextBlock>
+            </StatusBar>
+
+            <!-- Content here -->
+        </DockPanel>
+    </Grid>
+</Window>
